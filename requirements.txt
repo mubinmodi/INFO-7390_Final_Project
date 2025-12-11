@@ -1,0 +1,44 @@
+# Core Dependencies
+python-dotenv==1.0.0
+openai==1.12.0
+pymilvus==2.3.6
+
+# SEC Data Acquisition
+sec-edgar-downloader==5.0.3
+requests==2.31.0
+
+# PDF Processing
+pdfplumber==0.10.3
+PyPDF2==3.0.1
+Pillow==10.2.0
+pytesseract==0.3.10
+opencv-python==4.9.0.80
+
+# Table Extraction
+camelot-py[cv]==0.11.0
+tabula-py==2.9.0
+
+# Data Processing
+pandas==2.2.0
+numpy==1.26.3
+openpyxl==3.1.2
+lxml==5.1.0
+
+# Embeddings & NLP
+sentence-transformers==2.3.1
+tiktoken==0.5.2
+
+# UI Framework
+streamlit==1.31.0
+plotly==5.18.0
+matplotlib==3.8.2
+
+# Utilities
+tqdm==4.66.1
+beautifulsoup4==4.12.3
+python-dateutil==2.8.2
+pyyaml==6.0.1
+
+# Testing
+pytest==8.0.0
+pytest-cov==4.1.0
