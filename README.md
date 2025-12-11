@@ -1,4 +1,6 @@
-SEC Filing Analysis System - Project Structure
+# SEC Filing Analysis System - Project Structure
+
+```
 sec-filing-analyzer/
 ├── README.md
 ├── requirements.txt
@@ -54,33 +56,49 @@ sec-filing-analyzer/
     ├── setup_milvus.py       # Initialize Milvus collections
     ├── process_filing.py     # Process single filing
     └── batch_process.py      # Batch processing
-Setup Instructions
+```
 
-Install Dependencies
+## Setup Instructions
 
-bash   pip install -r requirements.txt
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Configure Environment
-
-bash   cp .env.example .env
+2. **Configure Environment**
+   ```bash
+   cp .env.example .env
    # Edit .env with your API keys
+   ```
 
-Setup Milvus
-
-bash   # Option 1: Docker (recommended)
+3. **Setup Milvus**
+   ```bash
+   # Option 1: Docker (recommended)
    docker-compose up -d
    
    # Option 2: Milvus Lite (embedded)
    # No setup needed, runs in-process
+   ```
 
-Initialize Database
+4. **Initialize Database**
+   ```bash
+   python scripts/setup_milvus.py
+   ```
 
-bash   python scripts/setup_milvus.py
+5. **Process Sample Filing**
+   ```bash
+   python scripts/process_filing.py --ticker AAPL --year 2023
+   ```
 
-Process Sample Filing
+6. **Run Application**
+   ```bash
+   streamlit run src/app/streamlit_app.py
+   ```
 
-bash   python scripts/process_filing.py --ticker AAPL --year 2023
+## Key Technologies
 
-Run Application
-
-bash   streamlit run src/app/streamlit_app.py
+- **Data Pipeline**: sec-edgar-downloader, pdfplumber, Camelot, LayoutParser
+- **Vector DB**: Milvus (with OpenAI embeddings)
+- **LLM**: OpenAI GPT-4
+- **UI**: Streamlit
+- **Processing**: pandas, numpy, python-docx
