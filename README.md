@@ -99,7 +99,8 @@ sec-filing-analyzer/
 
 - **Data Pipeline**: sec-edgar-downloader, pdfplumber, Camelot, LayoutParser
 - **Vector DB**: Milvus (with OpenAI embeddings)
-- **LLM**: Claude
+- **LLM**: Claude Api
 - **UI**: Streamlit
 - **Processing**: pandas, numpy, python-docx
+
 
